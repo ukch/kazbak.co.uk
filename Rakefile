@@ -93,10 +93,22 @@ task :page do
   end
 end # task :page
 
+desc "Install dependencies"
+task :install_deps do
+    system "bundle"
+end
+
 desc "Launch preview environment"
-task :preview do
-  system "jekyll serve -w"
+task :preview => [:install_deps] do
+  system "bundle exec jekyll serve -w"
 end # task :preview
+
+desc "Build project into _site"
+task :build => [:install_deps] do
+    system "bundle exec jekyll build"
+end
+
+task :default => [:build]
 
 def ask(message, valid_options)
   if valid_options

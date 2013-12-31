@@ -58,13 +58,13 @@ task :post do
   puts "Creating new post: #{filename}"
   open(filename, 'w') do |post|
     post.puts "---"
-    post.puts "layout: post"
+    post.puts "layout: default"
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
     post.puts 'description: ""'
     post.puts "category: \"#{category.gsub(/-/,' ')}\""
     post.puts "tags: #{tags}"
     post.puts "---"
-    post.puts "{% include JB/setup %}"
+    post.puts "# {{ page.title }}"
   end
 end # task :post
 
@@ -85,11 +85,11 @@ task :page do
   puts "Creating new page: #{filename}"
   open(filename, 'w') do |post|
     post.puts "---"
-    post.puts "layout: page"
+    post.puts "layout: default"
     post.puts "title: \"#{title}\""
     post.puts 'description: ""'
     post.puts "---"
-    post.puts "{% include JB/setup %}"
+    post.puts "# {{ page.title }}"
   end
 end # task :page
 

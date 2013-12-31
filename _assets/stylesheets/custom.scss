@@ -1,7 +1,18 @@
+@import "highlights.scss";
+
 .smbuttons {
     text-align: center;
 
     .grouping {
         display: inline-block;
+    }
+}
+
+.blog-image {
+    max-width: 500px;
+    padding: 10px;
+
+    img {
+        width: 100%;
     }
 }

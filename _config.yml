@@ -4,5 +4,6 @@ source:      .
 destination: ./_site
 plugins:     ./_plugins
 future:      true
-markdown:    maruku
+markdown:    redcarpet
+pygments:    true
 permalink:   /blog/:year/:month/:day/:title

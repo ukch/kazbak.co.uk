@@ -7,3 +7,6 @@ future:      true
 markdown:    redcarpet
 pygments:    true
 permalink:   /blog/:year/:month/:day/:title
+
+# Template variables
+google_analytics_tracking_code: UA-26492626-1

@@ -9,4 +9,7 @@ pygments:    true
 permalink:   /blog/:year/:month/:day/:title
 
 # Template variables
+name: kazbak.co.uk
+description: The (sometimes) interesting thoughts of Joel Cross
+url: http://kazbak.co.uk
 google_analytics_tracking_code: UA-26492626-1
